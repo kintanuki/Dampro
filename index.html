@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Dampro</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- <img src="img/dampro.png" style=" height: 60px;"alt=""> -->
+            <h1 class="logo">Academia Dampro</h1>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#grupos">Grupos</a>
+                <a href="#profesores">Profesores</a>
+                <a href="#equipo">Equipo</a>
+                <a href="#eventos">Eventos</a>
+                <a href="#logros">Logros</a>
+                <a href="#noticias">Noticias</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Dampro mi <span class="highlight">Familia</span> mi estilo de vida</h1>
+            <p>Descubre tu pasión por la danza en nuestra familia</p>
+            <div class="buttons">
+                <button class="btn-primary">Únete Ahora</button>
+                <button class="btn-outline"><a href="href="#grupos"">Ver clases</a></button>
+            </div>
+        </div>
+        <!-- Floating Elements -->
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+    </section>
+
+    <!-- GRUPOS -->
+    <section id="grupos" class="section">
+        <div class="section-header">
+            <h2>Nuestros Grupos Academicos</h2>
+            <p>Encuentra tu lugar en nuestra diversa comunidad de bailarines</p><br>
+        </div>
+        <br>
+        <div id="groups-container" class="grid"></div>
+    </section>
+
+    <!-- PROFESORES -->
+    <section id="profesores" class="section alt">
+        <div class="section-header">
+            <h2>Nuestros Maestros</h2>
+            <p>Artistas profesionales dedicados a tu crecimiento</p>
+        </div>
+        <br>
+        <div id="teachers-container" class="grid"></div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section id="equipo" class="section">
+        <div class="section-header">
+            <h2>Nuestro Equipo Administrativo</h2>
+            <p>Personas que hacen posible el funcionamiento de la academia</p>
+        </div>
+        <br>
+        <div id="admin-container" class="grid"></div>
+    </section>
+
+    <!-- EVENTOS -->
+    <section id="eventos" class="section alt">
+        <div class="section-header">
+            <h2>Próximos Eventos</h2>
+            <p>No te pierdas nuestras actividades y presentaciones</p>
+        </div>
+        <br>
+        <div id="events-container"></div>
+    </section>
+
+    <!-- LOGROS -->
+    <section id="logros" class="section">
+        <div class="section-header">
+            <h2>Nuestros Logros</h2>
+            <p>Celebrando cada paso en nuestro camino artístico</p>
+        </div>
+        <br>
+        <div id="achievements-container" class="grid"></div>
+    </section>
+
+    <!-- NOTICIAS -->
+    <section id="noticias" class="section alt">
+        <div class="section-header">
+            <h2>Últimas Noticias</h2>
+            <p>Mantente al día con lo más reciente de DanceArt Academy</p>
+        </div>
+
+        <!-- Carrusel -->
+        <div class="carousel relative overflow-hidden">
+            <div id="news-carousel" class="flex transition-transform duration-500"></div>
+            <div class="flex justify-center mt-4 space-x-2" id="carousel-indicators"></div>
+            <button id="prev-btn" class="absolute left-2 top-1/2">⬅</button>
+            <button id="next-btn" class="absolute right-2 top-1/2">➡</button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h3>Academia Dampro</h3>
+                <p>Transformando vidas a través del arte de la danza desde 2002?. Únete a nuestra familia artística.</p>
+            </div>
+            <div>
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#">Clases</a></li>
+                    <li><a href="#">Horarios</a></li>
+                    <li><a href="#">Precios</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <p>📍 Av. Principal 123, Ciudad</p>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>✉️ corero</p>
+                <p>🕒 Lun-Vie: 9AM-10PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Academia Dampro. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
