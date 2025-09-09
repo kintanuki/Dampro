@@ -4,6 +4,8 @@ const data = {
         {
             name: "Infantil A",
             description: "Descripción del grupo",
+            description_large: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+            type: "grupo",
             ages: "2-3 años",
             schedule: "Sab 10:00 AM -1:00 PM",
             image: "../img/img-group.jpg"
@@ -11,6 +13,8 @@ const data = {
         {
             name: "Infantil B",
             description: "Descripción del grupo",
+            description_large: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+            type: "grupo",
             ages: "2-3 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
             image: "../img/img-group.jpg"
@@ -18,6 +22,8 @@ const data = {
         {
             name: "Junior A",
             description: "Descripcion del grupo",
+            description_large: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+            type: "grupo",
             ages: "2-3 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
             image: "../img/img-group.jpg"
@@ -25,6 +31,8 @@ const data = {
         {
             name: "Junior B",
             description: "Descripcion del grupo",
+            description_large: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+            type: "grupo",
             ages: "2-3 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
             image: "../img/img-group.jpg"
@@ -32,6 +40,8 @@ const data = {
         {
             name: "Junior C",
             description: "Descripcion del grupo",
+            description_large: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+            type: "grupo",
             ages: "2-3 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
             image: "../img/img-group.jpg"
@@ -39,6 +49,27 @@ const data = {
         {
             name: "Juvenil C",
             description: "Descripcion del grupo",
+            description_large: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+            type: "grupo",
+            ages: "2-3 años",
+            schedule: "Sab 10:00 AM - 1:00 PM",
+            image: "../img/img-group.jpg"
+        },
+        {
+            name: "Compañia Yurumany",
+            description: "Descripcion del grupo",
+            description_large: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+            type: "compañia",
+            ages: "2-3 años",
+            schedule: "Sab 10:00 AM - 1:00 PM",
+            image: "../img/img-group.jpg"
+        }
+        ,
+        {
+            name: "Compañia Kawsay",
+            description: "Descripcion del grupo",
+            description_large: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+            type: "compañia",
             ages: "2-3 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
             image: "../img/img-group.jpg"
@@ -201,11 +232,14 @@ document.addEventListener("DOMContentLoaded", () => {
 //* Populate Sections
 
 function populateGroups() {
-    const container = document.getElementById("groups-container");
-    container.innerHTML = data.groups.map(
-        (group, index) =>
-            `
-        <div class="group-card" style="animation-delay: ${index * 0.1}s">
+    const groupsContainer = document.getElementById("groups-container");
+    const companiesContainer = document.getElementById("companies-container")
+
+    groupsContainer.innerHTML = data.groups.filter(item => item.type === "grupo")
+        .map(
+            (group, index) =>
+                `
+        <div class="group-card" data-index="${index}" style="animation-delay: ${index * 0.1}s">
             <div class="group-image">
                 <img src="${group.image}">
                 </div>
@@ -218,9 +252,86 @@ function populateGroups() {
             </div>
         </div>
         `
-    )
+        )
         .join("");
+
+    companiesContainer.innerHTML = data.groups.filter(item => item.type === "compañia")
+        .map(
+            (group, index) =>
+                `
+         <div class="group-card" style="animation-delay: ${index * 0.1}s">
+            <div class="group-image">
+                <img src="${group.image}">
+                </div>
+                <h3>${group.name}</h3>
+                <p>${group.description}</p>
+                <div class="group-details">
+                    <p class="ages">Edades: ${group.ages}</p>
+                    <p class="schedule">${group.schedule}</p>
+                </div>
+            </div>
+        </div>
+        `
+        )
+        .join("");
+    //EVENTO
+    document.querySelectorAll(".group-card").forEach(card => {
+        card.addEventListener("click", () => {
+            const index = card.getAttribute("data-index");
+            openModal(data.groups[index]);
+        });
+    });
 }
+
+function openModal(group) {
+    const modal = document.getElementById("modal");
+
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <img src="${group.image}" alt="${group.name}" class="modal-image">
+            <h2>${group.name}</h2>
+            <p>${group.description_large}</p>
+            <p><strong>Edades:</strong> ${group.ages}</p>
+            <p><strong>Horario:</strong> ${group.schedule}</p>
+            <a href="https://wa.me/573187059300?text=%C2%A1Hola!%20Me%20interesa%20unirme%20a%20${encodeURIComponent(group.name)}.%20%C2%BFMe%20das%20m%C3%A1s%20informaci%C3%B3n%3F" 
+            target="_blank">
+                <button class="btn-primary">Unirme ahora</button>
+            </a>
+        </div>
+    `;
+
+    modal.classList.remove("hidden");
+
+    const modalContent = modal.querySelector(".modal-content");
+
+    void modalContent.offsetWidth;
+
+    modalContent.classList.add("show");
+
+    document.getElementById("closeModal").addEventListener("click", () => {
+        closeModal(modal, modalContent);
+    });
+
+    // El modal se va a cerrar cuando se toca afuera de este
+    window.addEventListener("click", (e) => {
+        if (e.target.id === "modal") {
+            closeModal(modal, modalContent);
+        }
+    });
+}
+
+function closeModal(modal, modalContent) {
+    modalContent.classList.remove("show");
+    modalContent.classList.add("hide");
+
+    // Espera a que la animacion se termine
+    modalContent.addEventListener("transitionend", () => {
+        modal.classList.add("hidden");
+        modalContent.classList.remove("hide");
+    }, { once: true });
+}
+
 
 function populateTeachers() {
     const container = document.getElementById("teachers-container");
@@ -297,10 +408,10 @@ function populateEvents() {
     `).join("");
 }
 
-function populateAchievements(){
+function populateAchievements() {
     const container = document.getElementById("achievements-container");
-    container.innerHTML = data.achievements. map(
-        (achievement,index) => `
+    container.innerHTML = data.achievements.map(
+        (achievement, index) => `
         <div class="achievements-card" style="animation-delay: ${index * 0.1}s">
             <div class="achievement-content">
                 <div class="achievement-icon">${achievement.icon}</div>

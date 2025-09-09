@@ -15,8 +15,11 @@
     <!-- NAV -->
     <nav class="navbar">
         <div class="nav-container">
-            <!-- <img src="img/dampro.png" style=" height: 60px;"alt=""> -->
-            <h1 class="logo">Academia Dampro</h1>
+            <div class="log" style="display:flex; align-items: center;">
+                <img src="img/dampro.png" style=" height: 60px;" alt="">
+                <h1 class="logo">Academia Dampro</h1>
+
+            </div>
             <div class="nav-links">
                 <a href="#inicio">Inicio</a>
                 <a href="#grupos">Grupos</a>
@@ -35,14 +38,21 @@
             <h1>Dampro mi <span class="highlight">Familia</span> mi estilo de vida</h1>
             <p>Descubre tu pasión por la danza en nuestra familia</p>
             <div class="buttons">
-                <button class="btn-primary">Únete Ahora</button>
-                <button class="btn-outline"><a href="href="#grupos"">Ver clases</a></button>
+                <a href="https://wa.me/573187059300?text=%C2%A1Hola!%20Me%20interesa%20unirme%20a%20la%20familia%20Dampro.%20%C2%BFMe%20das%20m%C3%A1s%20informaci%C3%B3n%3F"
+                    target="_blank">
+                    <button class="btn-primary">Únete Ahora</button>
+                </a>
+
+                <button class="btn-outline"><a href="#grupos">Ver clases</a></button>
             </div>
         </div>
         <!-- Floating Elements -->
         <div class="circle circle1"></div>
         <div class="circle circle2"></div>
         <div class="circle circle3"></div>
+        <div class="circle circle4"></div>
+        <div class="circle circle5"></div>
+
     </section>
 
     <!-- GRUPOS -->
@@ -53,7 +63,25 @@
         </div>
         <br>
         <div id="groups-container" class="grid"></div>
+        <br>
+        <div class="section-header">
+            <h2>Nuestras Compañias</h2>
+            <br>
+            <div id="companies-container" class="grid"></div>
+        </div>
     </section>
+
+    <!-- INFO DE LOS GRUPOS -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <img id="modal-image" src="" alt="" class="modal-image">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p><strong>Edades:</strong> <span id="modal-ages"></span></p>
+            <p><strong>Horario:</strong> <span id="modal-schedule"></span></p>
+        </div>
+    </div>
 
     <!-- PROFESORES -->
     <section id="profesores" class="section alt">
@@ -99,7 +127,7 @@
     <section id="noticias" class="section alt">
         <div class="section-header">
             <h2>Últimas Noticias</h2>
-            <p>Mantente al día con lo más reciente de DanceArt Academy</p>
+            <p>Mantente al día con lo más reciente de Dampro</p>
         </div>
 
         <!-- Carrusel -->
@@ -116,23 +144,16 @@
         <div class="footer-container">
             <div>
                 <h3>Academia Dampro</h3>
-                <p>Transformando vidas a través del arte de la danza desde 2002?. Únete a nuestra familia artística.</p>
+                <p>Transformando vidas a través del arte de la danza desde 2002?. Únete a nuestra familia.</p>
             </div>
             <div>
-                <h4>Enlaces Rápidos</h4>
-                <ul>
-                    <li><a href="#">Clases</a></li>
-                    <li><a href="#">Horarios</a></li>
-                    <li><a href="#">Precios</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
             </div>
             <div>
                 <h4>Contacto</h4>
-                <p>📍 Av. Principal 123, Ciudad</p>
-                <p>📞 +1 (555) 123-4567</p>
-                <p>✉️ corero</p>
-                <p>🕒 Lun-Vie: 9AM-10PM</p>
+                <p>📍 Cll 111 # 22-84, Bucaramanga-Provenza</p>
+                <p>📞 +57 (318) 70593007</p>
+                <p>✉️ academiadampro@gmail.com</p>
+                <p>🕒 Lun-Sab: 9AM-6PM</p>
             </div>
         </div>
         <div class="footer-bottom">

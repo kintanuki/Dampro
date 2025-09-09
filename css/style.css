@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     color: #333;
@@ -136,8 +140,8 @@ body {
     transition: all 0.3s;
 }
 
-.btn-outline a{
-text-decoration: none;
+.btn-outline a {
+    text-decoration: none;
     color: inherit;
 }
 
@@ -197,6 +201,14 @@ text-decoration: none;
     animation-delay: 1.4s;
 }
 
+.circle4 {
+    animation-delay: 1.6s;
+}
+
+.circle5 {
+    animation-delay: 1.8s;
+}
+
 @keyframes fadeInScale {
     from {
         opacity: 0;
@@ -240,6 +252,14 @@ text-decoration: none;
     width: 40px;
     height: 40px;
     background: var(--accent);
+}
+
+.circle4 {
+    top: 50%;
+    left: 70%;
+    width: 90px;
+    height: 90px;
+    background: var(--circle-transparent);
 }
 
 @keyframes fadeInFloat {
@@ -303,13 +323,13 @@ text-decoration: none;
 .footer h3 {
     font-size: 1.8rem;
     font-family: 'Playfair Display', serif;
-    color: #fb923c;
+    color: var(--primary);
     margin-bottom: 15px;
 }
 
 .footer h4 {
     font-size: 1.2rem;
-    color: #fb923c;
+    color: var(--primary);
     margin-bottom: 10px;
 }
 
@@ -340,6 +360,13 @@ text-decoration: none;
     max-width: 1200px;
     margin: 0 auto;
 }
+
+#companies-container.grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 
 #teachers-container.grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -458,6 +485,66 @@ text-decoration: none;
     color: #6b7280;
 }
 
+/* MODAL INFO DE LOS GRUPOS */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 60%;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+/* Animacion de entrada */
+.modal-content.show {
+    opacity: 1;
+    transform: scale(1);
+}
+/* Animacion de salida */
+.modal-content.hide {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+
+.modal-image {
+    height: 250px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
 /* ====== TEACHER CARDS ====== */
 .teacher-card,
 .admin-card,
@@ -504,7 +591,7 @@ text-decoration: none;
     padding: 20px;
 }
 
-.teacher-info h3, 
+.teacher-info h3,
 .admin-info h3,
 .achievements-info {
     margin: 16px 0 6px;
@@ -806,7 +893,7 @@ text-decoration: none;
     }
 
     #groups-container.grid,
-    #teachers-container.grid,
+    #companies-container.grid #teachers-container.grid,
     #admin-container.grid,
     #achievements-container.grid {
         grid-template-columns: 1fr;
