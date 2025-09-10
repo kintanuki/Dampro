@@ -81,7 +81,7 @@ const data = {
             name: "Jorge Mauricio Pinilla",
             specialty: "Especialidad? jsjsjjs",
             experience: "Mucho tiempo?",
-            image: "../img/img-teacher.jpg",
+            image: "https://drive.google.com/uc?export=view&id=17nwh1zldG75rfqt5LbWuZguQ-Kxtlmeb",
             achievements: ["Director", "Coreografo"]
         },
         {
@@ -204,7 +204,35 @@ const data = {
             title: "Presentaciones",
             description: "En teatros y eventos del pais"
         }
-    ]
+    ],
+    //! Noticias
+    newsItems: [
+        {
+            id: 1,
+            title: "Nueva Sede en el Centro de la Ciudad",
+            excerpt: "Pequeña info",
+            date: "15 Febrero 2024",
+            image: "https://blog.uber-cdn.com/cdn-cgi/image/width=2160,quality=80,onerror=redirect,format=auto/wp-content/uploads/2019/06/7-planes-en-Bucaramanga-para-aprovechar-tu-fin-de-semana-1024x512.png",
+            link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1",
+        },
+        {
+            id: 2,
+            title: "Estudiantes Ganan Competencia Internacional",
+            excerpt: "Pequeña info",
+            date: "8 Febrero 2024",
+            image: "https://blog.uber-cdn.com/cdn-cgi/image/width=2160,quality=80,onerror=redirect,format=auto/wp-content/uploads/2019/06/7-planes-en-Bucaramanga-para-aprovechar-tu-fin-de-semana-1024x512.png",
+            link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1",
+
+        },
+        {
+            id: 3,
+            title: "Nuevos programas",
+            excerpt: "Pequeña info",
+            date: "1 Febrero 2024",
+            image: "https://blog.uber-cdn.com/cdn-cgi/image/width=2160,quality=80,onerror=redirect,format=auto/wp-content/uploads/2019/06/7-planes-en-Bucaramanga-para-aprovechar-tu-fin-de-semana-1024x512.png",
+            link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1",
+        },
+    ],
 }
 // * varibales carrusel
 let currentSlide = 0;
@@ -275,45 +303,71 @@ function populateGroups() {
         )
         .join("");
     //EVENTO
-    document.querySelectorAll(".group-card").forEach(card => {
+    // Para grupos
+    document.querySelectorAll(".group-card").forEach((card, index) => {
+        card.setAttribute("data-type", "grupo");
+        card.setAttribute("data-index", index);
+
         card.addEventListener("click", () => {
-            const index = card.getAttribute("data-index");
-            openModal(data.groups[index]);
+            openModal(index, "grupo");
         });
     });
+
+    // Para compañías
+    document.querySelectorAll(".company-card").forEach((card, index) => {
+        card.setAttribute("data-type", "compañia");
+        card.setAttribute("data-index", index);
+
+        card.addEventListener("click", () => {
+            openModal(index, "compañia");
+        });
+    });
+
 }
 
-function openModal(group) {
+function openModal(index, type) {
     const modal = document.getElementById("modal");
 
+    let group;
+    if (type === "grupo") {
+        group = data.groups[index];
+    } else if (type === "compañia") {
+        group = data.companies[index];
+    }
+
+    if (!group) {
+        console.error("No se encontró el objeto con index:", index, "y type:", type);
+        return;
+    }
+
+    // Generar contenido
     modal.innerHTML = `
-        <div class="modal-content">
-            <span class="close-btn" id="closeModal">&times;</span>
-            <img src="${group.image}" alt="${group.name}" class="modal-image">
-            <h2>${group.name}</h2>
-            <p>${group.description_large}</p>
-            <p><strong>Edades:</strong> ${group.ages}</p>
-            <p><strong>Horario:</strong> ${group.schedule}</p>
-            <a href="https://wa.me/573187059300?text=%C2%A1Hola!%20Me%20interesa%20unirme%20a%20${encodeURIComponent(group.name)}.%20%C2%BFMe%20das%20m%C3%A1s%20informaci%C3%B3n%3F" 
-            target="_blank">
-                <button class="btn-primary">Unirme ahora</button>
-            </a>
-        </div>
-    `;
+    <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <img src="${group.image}" alt="${group.name}" class="modal-image">
+        <h2>${group.name}</h2>
+        <p>${group.description_large}</p>
+        <p><strong>Edades:</strong> ${group.ages}</p>
+        <p><strong>Horario:</strong> ${group.schedule}</p>
+        <a href="https://wa.me/573187059300?text=%C2%A1Hola!%20Me%20interesa%20unirme%20a%20${encodeURIComponent(group.name)}.%20%C2%BFMe%20das%20m%C3%A1s%20informaci%C3%B3n%3F" 
+        target="_blank">
+            <button class="btn-primary">Unirme ahora</button>
+        </a>
+    </div>
+  `;
 
+    // Mostrar animación de entrada
     modal.classList.remove("hidden");
-
     const modalContent = modal.querySelector(".modal-content");
+    requestAnimationFrame(() => {
+        modalContent.classList.add("show");
+    });
 
-    void modalContent.offsetWidth;
-
-    modalContent.classList.add("show");
-
+    // Cerrar modal
     document.getElementById("closeModal").addEventListener("click", () => {
         closeModal(modal, modalContent);
     });
 
-    // El modal se va a cerrar cuando se toca afuera de este
     window.addEventListener("click", (e) => {
         if (e.target.id === "modal") {
             closeModal(modal, modalContent);
@@ -321,17 +375,17 @@ function openModal(group) {
     });
 }
 
+
 function closeModal(modal, modalContent) {
     modalContent.classList.remove("show");
     modalContent.classList.add("hide");
 
-    // Espera a que la animacion se termine
+    // Esperar a que termine la animación
     modalContent.addEventListener("transitionend", () => {
         modal.classList.add("hidden");
         modalContent.classList.remove("hide");
     }, { once: true });
 }
-
 
 function populateTeachers() {
     const container = document.getElementById("teachers-container");
@@ -424,4 +478,112 @@ function populateAchievements() {
         </div>
         `
     )
+}
+
+function populateNews() {
+    if (!newsCarousel) return;
+
+    newsCarousel.innerHTML = data.newsItems.map((news) => `
+                <div class="carousel-slide">
+                    <div class="news-item">
+                        <div class="news-image">
+                            <img src="${news.image}" alt="${news.title}">
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">${news.date}</div>
+                            <h3>${news.title}</h3>
+                            <p>${news.excerpt}</p>
+                            <a href="${news.link}" target="_blank" class="news-button">Leer Más</a>
+                        </div>
+                    </div>
+                </div>
+            `).join("");
+
+    if (carouselIndicators) {
+        carouselIndicators.innerHTML = data.newsItems.map((_, index) => `
+                    <button class="carousel-indicator ${index === 0 ? "active" : ""}" data-slide="${index}"></button>
+                `).join("");
+    }
+}
+
+// * Funcionalidad del carrusel
+function initializeCarousel() {
+    if (!prevBtn || !nextBtn || !newsCarousel) return;
+
+    prevBtn.addEventListener("click", prevSlide);
+    nextBtn.addEventListener("click", nextSlide);
+
+    if (carouselIndicators) {
+        document.querySelectorAll(".carousel-indicator").forEach((indicator, index) => {
+            indicator.addEventListener("click", () => goToSlide(index));
+        });
+    }
+
+    startCarouselAutoplay();
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % data.newsItems.length;
+    updateCarousel();
+}
+
+function prevSlide() {
+    currentSlide = currentSlide === 0 ? data.newsItems.length - 1 : currentSlide - 1;
+    updateCarousel();
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    updateCarousel();
+}
+
+function updateCarousel() {
+    if (newsCarousel) {
+        newsCarousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    if (carouselIndicators) {
+        document.querySelectorAll(".carousel-indicator").forEach((indicator, index) => {
+            if (index === currentSlide) {
+                indicator.classList.add("active");
+            } else {
+                indicator.classList.remove("active");
+            }
+        });
+    }
+}
+
+function startCarouselAutoplay() {
+    carouselInterval = setInterval(nextSlide, 5000);
+}
+
+function stopCarouselAutoplay() {
+    if (carouselInterval) {
+        clearInterval(carouselInterval);
+    }
+}
+
+function initializeScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll(".stagger-item").forEach((item) => {
+        observer.observe(item);
+    });
+}
+
+// Pausar carrusel al interactuar con él
+if (newsCarousel) {
+    newsCarousel.addEventListener("mouseenter", stopCarouselAutoplay);
+    newsCarousel.addEventListener("mouseleave", startCarouselAutoplay);
 }
