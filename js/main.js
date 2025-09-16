@@ -95,21 +95,21 @@ const data = {
             name: "Anny Dayanna Nuñez",
             specialty: "Especialidad? x2",
             experience: "3 años?",
-            image: "img/teacher2.png",
+            image: "img/anny.jpg",
             achievements: ["La mami de sergei", "Profesora junior?"],
         },
         {
             name: "Danna Sofia Baustista",
             specialty: "Hace algo?",
             experience: "En llegar tarde jsjsj",
-            image: "img/teacher2.png",
+            image: "img/danna.jpg",
             achievements: ["ni idea"],
         },
         {
             name: "Angie Tatiana Perez",
             specialty: "The peach? JASJAJSJ",
             experience: "4 años?",
-            image: "img/teacher2.png",
+            image: "img/gy.jpg",
             achievements: ["Profesora Juvenil?"],
         },
         {
@@ -133,13 +133,13 @@ const data = {
             name: "Daniel Lopez",
             position: "en 4? JASJS",
             description: "Miercoles de 2x1",
-            image: "img/teacher2.png",
+            image: "img/pipe.jpg",
         },
         {
             name: "Juan Diego Quintana",
             position: "El otro",
             description: "Vomite 🤮🤮",
-            image: "img/teacher2.png",
+            image: "img/juan-Diego.jpg",
         },
         {
             name: "Sergio",
@@ -151,7 +151,7 @@ const data = {
             name: "Julieth",
             position: "La perris",
             description: "La perris",
-            image: "img/teacher2.png",
+            image: "img/juliana.jpg",
         },
         {
             name: "Lily Perea",
@@ -247,6 +247,10 @@ const data = {
         },
     ],
 }
+// * navBar
+const hamburger = document.getElementById("hamburger")
+const navLinks = document.getElementById("nav-links")
+
 // * varibales carrusel
 let currentSlide = 0
 let carouselInterval
@@ -256,6 +260,11 @@ const newsCarousel = document.getElementById("news-carousel")
 const prevBtn = document.getElementById("prev-btn")
 const nextBtn = document.getElementById("next-btn")
 const carouselIndicators = document.getElementById("carousel-indicators")
+
+// * Funcionalidad de la hamburguesa
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active")
+})
 
 //* Inicializacion de la app
 
@@ -359,10 +368,12 @@ function openModal(index, type) {
     <div class="modal-content">
         <span class="close-btn" id="closeModal">&times;</span>
         <img src="${group.image}" alt="${group.name}" class="modal-image">
-        <h2>${group.name}</h2>
-        <p>${group.description_large}</p>
-        <p><strong>Edades:</strong> ${group.ages}</p>
-        <p><strong>Horario:</strong> ${group.schedule}</p>
+        <div class="info">
+            <h2>${group.name}</h2>
+            <p>${group.description_large}</p>
+            <p><strong>Edades:</strong> ${group.ages}</p>
+            <p><strong>Horario:</strong> ${group.schedule}</p>
+        </div>
         <a href="https://wa.me/573187059300?text=%C2%A1Hola!%20Me%20interesa%20unirme%20a%20${encodeURIComponent(group.name)}.%20%C2%BFMe%20das%20m%C3%A1s%20informaci%C3%B3n%3F" 
         target="_blank">
             <button class="btn-primary">Unirme ahora</button>

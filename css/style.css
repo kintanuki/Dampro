@@ -17,14 +17,20 @@ body {
 }
 
 :root {
-  /* Nueva paleta de colores azul-morado con mejor contraste */
-  --primary: #4f46e5; /* Azul vibrante */
-  --primary-dark: #3730a3; /* Azul oscuro */
-  --primary-light: #e0e7ff; /* Azul muy claro */
-  --secondary: #8b5cf6; /* Morado vibrante */
-  --secondary-dark: #7c3aed; /* Morado oscuro */
-  --secondary-light: #f3f4f6; /* Morado muy claro */
-  --accent: #06b6d4; /* Cyan para acentos */
+  --primary: #4f46e5;
+  /* Azul vibrante */
+  --primary-dark: #3730a3;
+  /* Azul oscuro */
+  --primary-light: #e0e7ff;
+  /* Azul muy claro */
+  --secondary: #8b5cf6;
+  /* Morado vibrante */
+  --secondary-dark: #7c3aed;
+  /* Morado oscuro */
+  --secondary-light: #f3f4f6;
+  /* Morado muy claro */
+  --accent: #06b6d4;
+  /* Cyan para acentos */
   --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #8b5cf6 100%);
   --gradient-secondary: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
   --gradient-accent: linear-gradient(135deg, #06b6d4 0%, #4f46e5 100%);
@@ -48,6 +54,7 @@ body {
     opacity: 0;
     transform: translateY(60px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -59,6 +66,7 @@ body {
     opacity: 0;
     transform: scale(0.8);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -66,21 +74,25 @@ body {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0px) rotate(0deg);
   }
+
   50% {
     transform: translateY(-20px) rotate(5deg);
   }
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
   }
+
   50% {
     transform: scale(1.05);
     box-shadow: 0 0 0 20px rgba(79, 70, 229, 0);
@@ -91,6 +103,7 @@ body {
   0% {
     background-position: -200% 0;
   }
+
   100% {
     background-position: 200% 0;
   }
@@ -101,6 +114,7 @@ body {
     opacity: 0;
     transform: translateX(-100px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -112,6 +126,7 @@ body {
     opacity: 0;
     transform: translateX(100px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -136,6 +151,7 @@ body {
     opacity: 0;
     transform: translateY(-100%);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -152,7 +168,7 @@ body {
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size:1.3rem;
   font-weight: bold;
   font-family: "Playfair Display", serif;
   background: var(--gradient-primary);
@@ -174,6 +190,7 @@ body {
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   animation: shimmer 3s infinite;
 }
+
 
 .nav-links a {
   margin: 0 15px;
@@ -206,6 +223,12 @@ body {
 
 .nav-links a:hover::before {
   width: 80%;
+}
+
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
 }
 
 /* ====== HERO ====== */
@@ -334,6 +357,11 @@ body {
 
 .btn-primary:hover::before {
   left: 100%;
+}
+
+.btn-primary a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .btn-outline {
@@ -654,7 +682,6 @@ body {
 .modal-content {
   background: var(--bg-light);
   padding: 40px;
-  width: 90%;
   max-width: 600px;
   border-radius: var(--radius);
   text-align: center;
@@ -676,11 +703,14 @@ body {
 }
 
 .modal-image {
-  width: 100%;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
   border-radius: var(--radius);
   margin-bottom: 25px;
+}
+
+.modal-content p {
+  font-size: 15px;
 }
 
 .close-btn {
@@ -1294,18 +1324,23 @@ body {
 .teacher-card:nth-child(1) {
   animation-delay: 0.1s;
 }
+
 .teacher-card:nth-child(2) {
   animation-delay: 0.2s;
 }
+
 .teacher-card:nth-child(3) {
   animation-delay: 0.3s;
 }
+
 .teacher-card:nth-child(4) {
   animation-delay: 0.4s;
 }
+
 .teacher-card:nth-child(5) {
   animation-delay: 0.5s;
 }
+
 .teacher-card:nth-child(6) {
   animation-delay: 0.6s;
 }
@@ -1313,17 +1348,44 @@ body {
 .event-card:nth-child(1) {
   animation-delay: 0.1s;
 }
+
 .event-card:nth-child(2) {
   animation-delay: 0.2s;
 }
+
 .event-card:nth-child(3) {
   animation-delay: 0.3s;
 }
+
 .event-card:nth-child(4) {
   animation-delay: 0.4s;
 }
 
 /* ====== RESPONSIVE DESIGN ====== */
+
+@media (max-width: 992px) {
+  .hamburger {
+    display: block; /* mostrar hamburguesa */
+  }
+
+  .nav-links {
+    display: none; /* ocultar menú normal */
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: flex; /* mostrar cuando se activa */
+  }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
@@ -1395,6 +1457,21 @@ body {
   .circle5 {
     display: none;
   }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+    /* que no se pase de la pantalla */
+  }
+
+  .modal-content .info {
+    overflow-y: auto;
+    max-height: 40vh;
+    /* ocupa solo parte de la pantalla */
+    padding-right: 8px;
+    /* espacio para que no tape el scrollbar */
+  }
 }
 
 @media (max-width: 480px) {
@@ -1440,6 +1517,7 @@ body {
 
 /* Mejoras de accesibilidad */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

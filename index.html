@@ -16,11 +16,17 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="log" style="display:flex; align-items: center;">
-                <img src="img/dampro.png" style=" height: 60px;" alt="">
+                <img src="img/dampro.png" style="height: 60px;" alt="">
                 <h1 class="logo">Academia Dampro</h1>
-
             </div>
-            <div class="nav-links">
+
+            <!-- Botón hamburguesa -->
+            <div class="hamburger" id="hamburger">
+                ☰
+            </div>
+
+            <!-- Links del menú -->
+            <div class="nav-links" id="nav-links">
                 <a href="#inicio">Inicio</a>
                 <a href="#grupos">Grupos</a>
                 <a href="#profesores">Profesores</a>
@@ -31,6 +37,7 @@
             </div>
         </div>
     </nav>
+
 
     <!-- HERO -->
     <section id="inicio" class="hero">
@@ -43,7 +50,7 @@
                     <button class="btn-primary">Únete Ahora</button>
                 </a>
 
-                <button class="btn-primary"><a href="#grupos">Ver clases</a></button>
+                <a href="#grupos"><button class="btn-primary">Ver clases</button></a>
             </div>
         </div>
         <!-- Floating Elements -->
@@ -101,7 +108,7 @@
             <p>No te pierdas nuestras actividades y presentaciones</p>
         </div>
         <br>
-        <div id="events-container"></div>
+        <div id="events-container" class="grid"></div>
     </section>
 
     <!-- LOGROS -->
