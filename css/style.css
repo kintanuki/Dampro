@@ -1486,6 +1486,8 @@ body {
   .event-card {
     flex-direction: column; /* imagen arriba, texto abajo */
     min-height: auto;
+    border-left: none;
+    border-bottom: 4px solid black;
   }
 
   .event-image-container {
