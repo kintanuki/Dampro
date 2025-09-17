@@ -262,9 +262,24 @@ const nextBtn = document.getElementById("next-btn")
 const carouselIndicators = document.getElementById("carousel-indicators")
 
 // * Funcionalidad de la hamburguesa
-hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active")
-})
+hamburger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle("active");
+});
+
+// * Se cierra cuando el evento esta fuera del modal
+document.addEventListener("click", (e) => {
+    if (navLinks.classList.contains("active") && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+        navLinks.classList.remove("active");
+    }
+});
+
+// * Se cierra al seleccionar una opcion
+document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
 
 //* Inicializacion de la app
 
@@ -468,8 +483,18 @@ function populateAdmin() {
 }
 
 function populateEvents() {
-    const container = document.getElementById("events-container")
-    container.innerHTML = data.events
+    const container = document.getElementById("events-container");
+    console.log("Contenedor encontrado:", container);
+    
+    if (!container) {
+        console.error("No se encontró el contenedor de eventos");
+        return;
+    }
+
+    console.log("Número de eventos:", data.events.length);
+    console.log("Datos de eventos:", data.events);
+
+    const eventsHTML = data.events
         .map(
             (event, index) => `
         <div class="event-card" style="animation-delay: ${index * 0.1}s">
@@ -485,14 +510,18 @@ function populateEvents() {
                     <div class="event-date">${event.date}</div>
                     <div class="event-location">
                         <span class="event-tag">📍</span>
-                        <span>${event.localitation}</span>
+                        <span>${event.location || event.localitation}</span>
                     </div>
                 </div>
             </div>
-            </div>
-    `,
+        </div>
+      `
         )
-        .join("")
+        .join("");
+
+    console.log("HTML generado:", eventsHTML);
+    container.innerHTML = eventsHTML;
+    console.log("Contenido insertado en el contenedor");
 }
 
 function populateAchievements() {
