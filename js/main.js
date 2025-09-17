@@ -99,14 +99,14 @@ const data = {
             achievements: ["La mami de sergei", "Profesora junior?"],
         },
         {
-            name: "Danna Sofia Baustista",
+            name: "Danna Sofia Bautista",
             specialty: "Hace algo?",
             experience: "En llegar tarde jsjsj",
             image: "img/danna.jpg",
             achievements: ["ni idea"],
         },
         {
-            name: "Angie Tatiana Perez",
+            name: "Angie Tatiana Pérez",
             specialty: "The peach? JASJAJSJ",
             experience: "4 años?",
             image: "img/gy.jpg",
@@ -120,7 +120,7 @@ const data = {
             achievements: ["Baile Salon????"],
         },
         {
-            name: "Cesar Lopez",
+            name: "Cesar Lépez",
             specialty: "Adiestrando perros",
             experience: "2 años",
             image: "img/teacher2.png",
@@ -130,7 +130,7 @@ const data = {
     // ! Equipo Admin
     adminTeam: [
         {
-            name: "Daniel Lopez",
+            name: "Daniel López",
             position: "en 4? JASJS",
             description: "Miercoles de 2x1",
             image: "img/pipe.jpg",
@@ -154,7 +154,7 @@ const data = {
             image: "img/juliana.jpg",
         },
         {
-            name: "Lily Perea",
+            name: "Lily Vega",
             position: "La novia de Sergei",
             description: "La futura esposa de Sergei",
             image: "img/teacher2.png",

@@ -538,6 +538,7 @@ body {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease-out forwards;
+  cursor: pointer;
 }
 
 .group-card::before {
@@ -900,7 +901,7 @@ body {
   box-shadow: var(--shadow);
   transition: all 0.4s ease;
   display: flex;
-  height: 140px;
+  height: auto;
   margin-bottom: 25px;
   position: relative;
   /* Animación de entrada */
@@ -1369,12 +1370,10 @@ body {
 @media (max-width: 992px) {
   .hamburger {
     display: block;
-    /* mostrar hamburguesa */
   }
 
   .nav-links {
     display: none;
-    /* ocultar menú normal */
     position: absolute;
     top: 70px;
     right: 20px;
@@ -1388,7 +1387,6 @@ body {
 
   .nav-links.active {
     display: flex;
-    /* mostrar cuando se activa */
   }
 }
 
@@ -1456,9 +1454,7 @@ body {
   .modal-content .info {
     overflow-y: auto;
     max-height: 40vh;
-    /* ocupa solo parte de la pantalla */
     padding-right: 8px;
-    /* espacio para que no tape el scrollbar */
   }
 }
 
@@ -1499,7 +1495,14 @@ body {
 
   .event-content {
     padding: 15px;
+    flex-direction: column;
   }
+
+.event-details{
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 }
 
 
