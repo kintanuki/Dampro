@@ -2,7 +2,7 @@ const data = {
     // ! Grupos Academicos
     groups: [
         {
-            name: "Infantil A",
+            name: "Pre-Infantil",
             description: "Descripción del grupo",
             description_large:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
@@ -12,7 +12,7 @@ const data = {
             image: "img/group2.png",
         },
         {
-            name: "Infantil B",
+            name: "Infantil",
             description: "Descripción del grupo",
             description_large:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
@@ -22,7 +22,7 @@ const data = {
             image: "img/group2.png",
         },
         {
-            name: "Junior A",
+            name: "Junior",
             description: "Descripcion del grupo",
             description_large:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
@@ -32,7 +32,7 @@ const data = {
             image: "img/group2.png",
         },
         {
-            name: "Junior B",
+            name: "Pre-Juvenil",
             description: "Descripcion del grupo",
             description_large:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
@@ -40,19 +40,8 @@ const data = {
             ages: "2-3 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
             image: "img/group2.png",
-        },
-        {
-            name: "Junior C",
-            description: "Descripcion del grupo",
-            description_large:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
-            type: "grupo",
-            ages: "2-3 años",
-            schedule: "Sab 10:00 AM - 1:00 PM",
-            image: "img/group2.png",
-        },
-        {
-            name: "Juvenil C",
+       {
+            name: "Juvenil",
             description: "Descripcion del grupo",
             description_large:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
