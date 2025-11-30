@@ -40,6 +40,7 @@ const data = {
             ages: "2-3 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
             image: "img/group2.png",
+        },
        {
             name: "Juvenil",
             description: "Descripcion del grupo",
