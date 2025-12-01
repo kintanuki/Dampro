@@ -293,6 +293,45 @@ const data = {
             type: "groupsWorks"
         }
     ],
+    //!Experiencias
+    experiences: [
+        {
+            image: "img/obra.jpg",
+            title: "Argentina",
+            localitation: "Buenos aires",
+            age: "2020"
+        },
+        {
+            image: "img/obra.jpg",
+            title: "Ecuador",
+            localitation: "Quito",
+            age: "2020"
+        },
+        {
+            image: "img/obra.jpg",
+            title: "Perú",
+            localitation: "Lima",
+            age: "2020"
+        },
+        {
+            image: "img/obra.jpg",
+            title: "México",
+            localitation: "Morelia",
+            age: "2020"
+        },
+        {
+            image: "img/obra.jpg",
+            title: "Gira Chile",
+            localitation: "Santiago de Chile",
+            age: "2020"
+        },
+        {
+            image: "img/obra.jpg",
+            title: "Danzando por el Perú",
+            localitation: "Lima Perú",
+            age: "2020"
+        }
+    ]
 
 }
 // * navBar
@@ -339,9 +378,7 @@ document.addEventListener("DOMContentLoaded", () => {
     populateEvents()
     populateAchievements()
     populateWorks()
-    populateNews()
-    initializeCarousel()
-    initializeScrollAnimations()
+    populateExperiences()
 })
 
 //* Populate Sections
@@ -653,118 +690,24 @@ function populateAchievements() {
     )
 }
 
-function populateNews() {
-    if (!newsCarousel) return
-
-    newsCarousel.innerHTML = data.newsItems
+function populateExperiences() {
+    const container = document.getElementById("experiencias-container")
+    container.innerHTML = data.experiences
         .map(
-            (news) => `
-                <div class="carousel-slide">
-                    <div class="news-item">
-                        <div class="news-image">
-                            <img src="${news.image}" alt="${news.title}">
-                        </div>
-                        <div class="news-content">
-                            <div class="news-date">${news.date}</div>
-                            <h3>${news.title}</h3>
-                            <p>${news.excerpt}</p>
-                            <a href="${news.link}" target="_blank" class="news-button">Leer Más</a>
-                        </div>
-                    </div>
+            (experience, index) =>
+                `
+         <div class="group-card" style="animation-delay: ${index * 0.1}s">
+            <div class="group-image">
+                <img src="${experience.image}">
                 </div>
-            `,
+                <h3>${experience.title}</h3>
+                <div class="group-details">
+                    <p class="ages">${experience.localitation}</p>
+                    <p class="schedule">${experience.age}</p>
+                </div>
+            </div>
+        </div>
+        `,
         )
         .join("")
-
-    if (carouselIndicators) {
-        carouselIndicators.innerHTML = data.newsItems
-            .map(
-                (_, index) => `
-                    <button class="carousel-indicator ${index === 0 ? "active" : ""}" data-slide="${index}"></button>
-                `,
-            )
-            .join("")
-    }
-}
-
-// * Funcionalidad del carrusel
-function initializeCarousel() {
-    if (!prevBtn || !nextBtn || !newsCarousel) return
-
-    prevBtn.addEventListener("click", prevSlide)
-    nextBtn.addEventListener("click", nextSlide)
-
-    if (carouselIndicators) {
-        document.querySelectorAll(".carousel-indicator").forEach((indicator, index) => {
-            indicator.addEventListener("click", () => goToSlide(index))
-        })
-    }
-
-    startCarouselAutoplay()
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % data.newsItems.length
-    updateCarousel()
-}
-
-function prevSlide() {
-    currentSlide = currentSlide === 0 ? data.newsItems.length - 1 : currentSlide - 1
-    updateCarousel()
-}
-
-function goToSlide(index) {
-    currentSlide = index
-    updateCarousel()
-}
-
-function updateCarousel() {
-    if (newsCarousel) {
-        newsCarousel.style.transform = `translateX(-${currentSlide * 100}%)`
-    }
-
-    if (carouselIndicators) {
-        document.querySelectorAll(".carousel-indicator").forEach((indicator, index) => {
-            if (index === currentSlide) {
-                indicator.classList.add("active")
-            } else {
-                indicator.classList.remove("active")
-            }
-        })
-    }
-}
-
-function startCarouselAutoplay() {
-    carouselInterval = setInterval(nextSlide, 5000)
-}
-
-function stopCarouselAutoplay() {
-    if (carouselInterval) {
-        clearInterval(carouselInterval)
-    }
-}
-
-function initializeScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible")
-            }
-        })
-    }, observerOptions)
-
-    document.querySelectorAll(".stagger-item").forEach((item) => {
-        observer.observe(item)
-    })
-}
-
-// Pausar carrusel al interactuar con él
-if (newsCarousel) {
-    newsCarousel.addEventListener("mouseenter", stopCarouselAutoplay)
-    newsCarousel.addEventListener("mouseleave", startCarouselAutoplay)
 }
