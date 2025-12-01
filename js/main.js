@@ -1,4 +1,10 @@
 const data = {
+    //! Quienes Somos
+    us: [
+        {
+            description: "Una academia de danza que fusiona técnicas de danza contemporánea, moderna y folclórica, formando bailarines con mentalidad profesional desde los 3 años. Ofrecemos programas para niños, jóvenes, adultos y adultos mayores. También contamos con servicios de shows, alquiler de vestuario y confección de trajes típicos. ¡Bailar es nuestra pasión!",
+        }
+    ],
     // ! Grupos Academicos
     groups: [
         {
@@ -41,7 +47,7 @@ const data = {
             schedule: "Sab 10:00 AM - 1:00 PM",
             image: "img/group2.png",
         },
-       {
+        {
             name: "Juvenil",
             description: "Descripcion del grupo",
             description_large:
@@ -236,6 +242,58 @@ const data = {
             link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1",
         },
     ],
+    //! Obras destacadas de la compañia
+    works: [
+        {
+            image: "img/obra.jpg",
+            title: "Marginados",
+            subtitle: "Juliano Pájara",
+            type: "companiesWorks"
+        },
+        {
+            image: "img/obra.jpg",
+            title: "Maria Teresa",
+            subtitle: "La historia de una montañera",
+            type: "companiesWorks"
+        },
+        {
+            image: "img/obra.jpg",
+            title: "Fiesta Campesina",
+            subtitle: "¡Que viva Santander mano",
+            type: "companiesWorks"
+        },
+        {
+            image: "img/obra.jpg",
+            title: "El casorio",
+            subtitle: "La historia de un amor campesino",
+            type: "companiesWorks"
+        },
+        {
+            image: "img/obra.jpg",
+            title: "Travesía",
+            subtitle: "Un viaje por colombia",
+            type: "companiesWorks"
+        },
+        {
+            image: "img/obra.jpg",
+            title: "La piedra de la felicidad",
+            subtitle: "Los laprosos de contratación",
+            type: "companiesWorks"
+        },
+        {
+            image: "img/obra.jpg",
+            title: "Enredados",
+            subtitle: "Adaptación de la película animada de disney",
+            type: "groupsWorks"
+        },
+        {
+            image: "img/obra.jpg",
+            title: "El origen de los guardianes",
+            subtile: "Adaptación de la película animada de DreamWorks",
+            type: "groupsWorks"
+        }
+    ],
+
 }
 // * navBar
 const hamburger = document.getElementById("hamburger")
@@ -274,17 +332,37 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
 //* Inicializacion de la app
 
 document.addEventListener("DOMContentLoaded", () => {
+    populateUs()
     populateGroups()
     populateTeachers()
     populateAdmin()
     populateEvents()
     populateAchievements()
+    populateWorks()
     populateNews()
     initializeCarousel()
     initializeScrollAnimations()
 })
 
 //* Populate Sections
+
+function populateUs() {
+    const container = document.getElementById("us-container")
+    container.innerHTML = data.us
+        .map(
+            (us, index) =>
+                `
+        <div class="group-image">
+            <img src="${us.image}">
+        </div>
+        <div class="us-card" data-index="${index}" style="animation-delay: ${index * 0.1}s">
+                <p>${us.description}</p>
+            </div>
+        </div>
+        `,
+        )
+        .join("")
+}
 
 function populateGroups() {
     const groupsContainer = document.getElementById("groups-container")
@@ -420,6 +498,49 @@ function closeModal(modal, modalContent) {
     )
 }
 
+function populateWorks() {
+    const companiesContainer = document.getElementById("companies-works")
+    const groupsContainer = document.getElementById("groups-works")
+
+    companiesContainer.innerHTML = data.works
+        .filter((item) => item.type === "companiesWorks")
+        .map(
+            (work, index) => `
+        <div class="event-card" style="animation-delay: ${index * 0.1}s">
+            <div class="event-image-container">
+                <img src="${work.image}" alt="${event.title}">
+            </div>
+            <div class="event-content">
+                <div class="event-info">
+                    <h3 class="event-title">${work.title}</h3>
+                    <p class="event-description">${work.subtitle}</p>
+                </div>
+            </div>
+        </div>
+      `
+        )
+        .join("");
+
+    groupsContainer.innerHTML = data.works
+        .filter((item) => item.type === "groupsWorks")
+        .map(
+            (work, index) => `
+        <div class="event-card" style="animation-delay: ${index * 0.1}s">
+            <div class="event-image-container">
+                <img src="${work.image}" alt="${event.title}">
+            </div>
+            <div class="event-content">
+                <div class="event-info">
+                    <h3 class="event-title">${work.title}</h3>
+                    <p class="event-description">${work.subtitle}</p>
+                </div>
+            </div>
+        </div>
+      `
+        )
+        .join("");
+}
+
 function populateTeachers() {
     const container = document.getElementById("teachers-container")
     container.innerHTML = data.teachers
@@ -475,7 +596,7 @@ function populateAdmin() {
 function populateEvents() {
     const container = document.getElementById("events-container");
     console.log("Contenedor encontrado:", container);
-    
+
     if (!container) {
         console.error("No se encontró el contenedor de eventos");
         return;
