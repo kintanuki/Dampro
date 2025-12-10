@@ -82,44 +82,44 @@ const data = {
     teachers: [
         {
             name: "Jorge Mauricio Pinilla",
-            specialty: "Especialidad? jsjsjjs",
-            experience: "Mucho tiempo?",
-            image: "img/teacher2.png",
+            //specialty: "Especialidad? jsjsjjs",
+            experience: "Director",
+            image: "img/mauricio.jpeg",
             achievements: ["Director", "Coreografo"],
         },
         {
             name: "Anny Dayanna Nuñez",
-            specialty: "Especialidad? x2",
-            experience: "3 años?",
+            //specialty: "Especialidad? x2",
+            experience: "Profesora",
             image: "img/anny.jpg",
             achievements: ["La mami de sergei", "Profesora junior?"],
         },
         {
             name: "Danna Sofia Bautista",
-            specialty: "Hace algo?",
-            experience: "En llegar tarde jsjsj",
-            image: "img/danna.jpg",
+            //specialty: "Hace algo?",
+            experience: "Auxiliar",
+            image: "img/danna.jpeg",
             achievements: ["ni idea"],
         },
         {
             name: "Angie Tatiana Pérez",
-            specialty: "The peach? JASJAJSJ",
-            experience: "4 años?",
-            image: "img/gy.jpg",
+            //specialty: "The peach? JASJAJSJ",
+            experience: "Profesora",
+            image: "img/gy.jpeg",
             achievements: ["Profesora Juvenil?"],
         },
         {
-            name: "Danna Paola",
-            specialty: "??????????",
-            experience: "este año?",
-            image: "img/teacher2.png",
+            name: "Angie Serrano",
+            //specialty: "??????????",
+            experience: "Profesora",
+            image: "img/angie.jpg",
             achievements: ["Baile Salon????"],
         },
         {
             name: "Cesar Lépez",
-            specialty: "Adiestrando perros",
-            experience: "2 años",
-            image: "img/teacher2.png",
+            //specialty: "Adiestrando perros",
+            experience: "Profesor",
+            image: "img/cesar.jpeg",
             achievements: ["Adiestrador"],
         },
     ],
@@ -129,13 +129,13 @@ const data = {
             name: "Daniel López",
             position: "en 4? JASJS",
             description: "Miercoles de 2x1",
-            image: "img/pipe.jpg",
+            image: "img/pipe.jpeg",
         },
         {
             name: "Juan Diego Quintana",
             position: "El otro",
             description: "Vomite 🤮🤮",
-            image: "img/juan-Diego.jpg",
+            image: "img/juan-Diego.jpeg",
         },
         {
             name: "Sergio",
@@ -147,13 +147,20 @@ const data = {
             name: "Julieth",
             position: "La perris",
             description: "La perris",
-            image: "img/juliana.jpg",
+            image: "img/julieth.jpeg",
         },
         {
             name: "Lily Vega",
             position: "La novia de Sergei",
             description: "La futura esposa de Sergei",
             image: "img/teacher2.png",
+        },
+        ,
+        {
+            name: "Juan Jose Sarabia",
+            position: "La novia de Sergei",
+            description: "La futura esposa de Sergei",
+            image: "img/juanjo.jpg",
         },
     ],
     // ! Eventos
@@ -394,7 +401,6 @@ function populateUs() {
         </div>
         <div class="us-card" data-index="${index}" style="animation-delay: ${index * 0.1}s">
                 <p>${us.description}</p>
-            </div>
         </div>
         `,
         )
@@ -590,7 +596,7 @@ function populateTeachers() {
             </div>
             <div class="teacher-info">
                 <h3>${teacher.name}</h3>
-                <p class="specialty">${teacher.specialty}</p>
+                <!-- <p class="specialty">${teacher.specialty}</p> -->
                 <p class="experience"><span>${teacher.experience}</span></p>
                 <br>
                 <div class="achievements">
