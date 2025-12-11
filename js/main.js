@@ -3,6 +3,10 @@ const data = {
     us: [
         {
             description: "Una academia de danza que fusiona técnicas de danza contemporánea, moderna y folclórica, formando bailarines con mentalidad profesional desde los 3 años. Ofrecemos programas para niños, jóvenes, adultos y adultos mayores. También contamos con servicios de shows, alquiler de vestuario y confección de trajes típicos. ¡Bailar es nuestra pasión!",
+            images: [
+            "img/group.jpg",
+            "img/obra.jpg",
+        ]
         }
     ],
     // ! Grupos Academicos
@@ -219,58 +223,28 @@ const data = {
             description: "En teatros y eventos del pais",
         },
     ],
-    //! Noticias
-    newsItems: [
-        {
-            id: 1,
-            title: "Nueva Sede en el Centro de la Ciudad",
-            excerpt: "Pequeña info",
-            date: "15 Febrero 2024",
-            image:
-                "https://blog.uber-cdn.com/cdn-cgi/image/width=2160,quality=80,onerror=redirect,format=auto/wp-content/uploads/2019/06/7-planes-en-Bucaramanga-para-aprovechar-tu-fin-de-semana-1024x512.png",
-            link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1",
-        },
-        {
-            id: 2,
-            title: "Estudiantes Ganan Competencia Internacional",
-            excerpt: "Pequeña info",
-            date: "8 Febrero 2024",
-            image:
-                "https://blog.uber-cdn.com/cdn-cgi/image/width=2160,quality=80,onerror=redirect,format=auto/wp-content/uploads/2019/06/7-planes-en-Bucaramanga-para-aprovechar-tu-fin-de-semana-1024x512.png",
-            link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1",
-        },
-        {
-            id: 3,
-            title: "Nuevos programas",
-            excerpt: "Pequeña info",
-            date: "1 Febrero 2024",
-            image:
-                "https://blog.uber-cdn.com/cdn-cgi/image/width=2160,quality=80,onerror=redirect,format=auto/wp-content/uploads/2019/06/7-planes-en-Bucaramanga-para-aprovechar-tu-fin-de-semana-1024x512.png",
-            link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1",
-        },
-    ],
     //! Obras destacadas de la compañia
     works: [
         {
-            image: "img/obra.jpg",
+            image: "img/marginados.jpg",
             title: "Marginados",
             subtitle: "Juliano Pájara",
             type: "companiesWorks"
         },
         {
-            image: "img/obra.jpg",
+            image: "img/mariaT.jpeg",
             title: "Maria Teresa",
             subtitle: "La historia de una montañera",
             type: "companiesWorks"
         },
         {
-            image: "img/obra.jpg",
+            image: "img/fiesta_campesina.jpeg",
             title: "Fiesta Campesina",
             subtitle: "¡Que viva Santander mano",
             type: "companiesWorks"
         },
         {
-            image: "img/obra.jpg",
+            image: "img/casorio.jpeg",
             title: "El casorio",
             subtitle: "La historia de un amor campesino",
             type: "companiesWorks"
@@ -297,6 +271,13 @@ const data = {
             image: "img/obra.jpg",
             title: "El origen de los guardianes",
             subtile: "Adaptación de la película animada de DreamWorks",
+            type: "groupsWorks"
+        }
+        ,
+        {
+            image: "img/emiliano.jpg",
+            title: "Emiliano y su bambazu",
+            subtile: "la historia de Emiliano",
             type: "groupsWorks"
         }
     ],
@@ -327,7 +308,7 @@ const data = {
             age: "2020"
         },
         {
-            image: "img/obra.jpg",
+            image: "img/chile.jpg",
             title: "Gira Chile",
             localitation: "Santiago de Chile",
             age: "2020"
@@ -391,20 +372,42 @@ document.addEventListener("DOMContentLoaded", () => {
 //* Populate Sections
 
 function populateUs() {
-    const container = document.getElementById("us-container")
-    container.innerHTML = data.us
-        .map(
-            (us, index) =>
-                `
-        <div class="group-image">
-            <img src="${us.image}">
+        const usContainer = document.getElementById("us-container");
+    const usData = data.us[0];
+
+    // Crear estructura del carrusel
+    usContainer.innerHTML = `
+        <div class="us-carousel">
+            <div class="us-slides"></div>
         </div>
-        <div class="us-card" data-index="${index}" style="animation-delay: ${index * 0.1}s">
-                <p>${us.description}</p>
-        </div>
-        `,
-        )
-        .join("")
+        <p class="us-description">${usData.description}</p>
+    `;
+
+    const slideContainer = usContainer.querySelector(".us-slides");
+
+    // Insertar imágenes
+    usData.images.forEach(img => {
+        const slide = document.createElement("div");
+        slide.classList.add("us-slide");
+
+        slide.innerHTML = `<img src="${img}" alt="Imagen nosotros">`;
+
+        slideContainer.appendChild(slide);
+    });
+
+    // --- Carrusel automático ---
+    let index = 0;
+    const slides = slideContainer.querySelectorAll(".us-slide");
+
+    function changeSlide() {
+        slides.forEach(s => s.style.opacity = "0");
+        slides[index].style.opacity = "1";
+
+        index = (index + 1) % slides.length;
+    }
+
+    changeSlide();  
+    setInterval(changeSlide, 3000); // Cambia cada 3 seg
 }
 
 function populateGroups() {
@@ -551,7 +554,7 @@ function populateWorks() {
             (work, index) => `
         <div class="event-card" style="animation-delay: ${index * 0.1}s">
             <div class="event-image-container">
-                <img src="${work.image}" alt="${event.title}">
+                <img src="${work.image}" alt="${event.title}" class="work-img">
             </div>
             <div class="event-content">
                 <div class="event-info">
