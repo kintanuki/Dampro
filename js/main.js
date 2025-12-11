@@ -113,7 +113,7 @@ const data = {
             //specialty: "??????????",
             experience: "Profesora",
             image: "img/angie.jpg",
-            achievements: ["Baile Salon????"],
+            achievements: ["Infanti", "Junior"],
         },
         {
             name: "Cesar Lépez",
