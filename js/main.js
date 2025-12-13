@@ -5,7 +5,7 @@ const data = {
             description: "Una academia de danza que fusiona técnicas de danza contemporánea, moderna y folclórica, formando bailarines con mentalidad profesional desde los 3 años. Ofrecemos programas para niños, jóvenes, adultos y adultos mayores. También contamos con servicios de shows, alquiler de vestuario y confección de trajes típicos. ¡Bailar es nuestra pasión!",
             images: [
             "img/group.webp",
-            "img/obra.jpg",
+            "img/group2.webp",
         ]
         }
     ],
@@ -137,7 +137,7 @@ const data = {
         },
         {
             name: "Juan Diego Quintana",
-            position: "Sistemas",
+            position: "Sistemas y medios audiovisuales",
             description: "Vomite 🤮🤮",
             image: "img/juan-Diego.webp",
         },
@@ -157,7 +157,7 @@ const data = {
             name: "Lily Vega",
             position: "administradora contable",
             description: "La futura esposa de Sergei",
-            image: "img/teacher2.png",
+            image: "img/lily.webp",
         },
         ,
         {
@@ -202,13 +202,13 @@ const data = {
     //! Obras destacadas de la compañia
     works: [
         {
-            image: "img/marginados.jpg",
+            image: "img/marginados.webp",
             title: "Marginados",
             subtitle: "Juliano Pájara",
             type: "companiesWorks"
         },
         {
-            image: "img/mariaT.jpeg",
+            image: "img/mariaT.webp",
             title: "Maria Teresa",
             subtitle: "La historia de una montañera",
             type: "companiesWorks"
@@ -220,7 +220,7 @@ const data = {
             type: "companiesWorks"
         },
         {
-            image: "img/casorio.jpeg",
+            image: "img/casorio.webp",
             title: "El casorio",
             subtitle: "La historia de un amor campesino",
             type: "companiesWorks"
@@ -239,7 +239,7 @@ const data = {
         }
         ,
         {
-            image: "img/emiliano.jpg",
+            image: "img/emiliano.webp",
             title: "Emiliano y su bambazu",
             subtile: "la historia de Emiliano",
             type: "groupsWorks"
