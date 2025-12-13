@@ -4,7 +4,7 @@ const data = {
         {
             description: "Una academia de danza que fusiona técnicas de danza contemporánea, moderna y folclórica, formando bailarines con mentalidad profesional desde los 3 años. Ofrecemos programas para niños, jóvenes, adultos y adultos mayores. También contamos con servicios de shows, alquiler de vestuario y confección de trajes típicos. ¡Bailar es nuestra pasión!",
             images: [
-            "img/group.jpg",
+            "img/group.webp",
             "img/obra.jpg",
         ]
         }
@@ -29,7 +29,7 @@ const data = {
             type: "grupo",
             ages: "2-3 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
-            image: "img/group2.png",
+            image: "img/infantil.webp",
         },
         {
             name: "Junior",
@@ -37,9 +37,9 @@ const data = {
             description_large:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
             type: "grupo",
-            ages: "2-3 años",
+            ages: "6-10 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
-            image: "img/group2.png",
+            image: "img/junior.webp",
         },
         {
             name: "Pre-Juvenil",
@@ -79,7 +79,7 @@ const data = {
             type: "compañia",
             ages: "2-3 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
-            image: "img/group2.png",
+            image: "img/kawsay.webp",
         },
     ],
     // ! Profesores
@@ -88,119 +88,95 @@ const data = {
             name: "Jorge Mauricio Pinilla",
             //specialty: "Especialidad? jsjsjjs",
             experience: "Director",
-            image: "img/mauricio.jpeg",
+            image: "img/mauricio.webp",
             achievements: ["Director", "Coreografo"],
         },
         {
             name: "Anny Dayanna Nuñez",
             //specialty: "Especialidad? x2",
             experience: "Profesora",
-            image: "img/anny.jpg",
+            image: "img/anny.webp",
             achievements: ["La mami de sergei", "Profesora junior?"],
         },
         {
             name: "Danna Sofia Bautista",
             //specialty: "Hace algo?",
             experience: "Auxiliar",
-            image: "img/danna.jpeg",
-            achievements: ["ni idea"],
+            image: "img/danna.webp",
+            achievements: ["Infantil B", "Junior B"],
         },
         {
             name: "Angie Tatiana Pérez",
             //specialty: "The peach? JASJAJSJ",
             experience: "Profesora",
-            image: "img/gy.jpeg",
+            image: "img/gy.webp",
             achievements: ["Profesora Juvenil?"],
         },
         {
             name: "Angie Serrano",
             //specialty: "??????????",
             experience: "Profesora",
-            image: "img/angie.jpg",
+            image: "img/angie.webp",
             achievements: ["Infanti", "Junior"],
         },
         {
             name: "Cesar Lépez",
             //specialty: "Adiestrando perros",
             experience: "Profesor",
-            image: "img/cesar.jpeg",
-            achievements: ["Adiestrador"],
+            image: "img/cesar.webp",
+            achievements: ["Juvenil", "Junior C"],
         },
     ],
     // ! Equipo Admin
     adminTeam: [
         {
             name: "Daniel López",
-            position: "en 4? JASJS",
+            position: "Medios Audiovisuales",
             description: "Miercoles de 2x1",
-            image: "img/pipe.jpeg",
+            image: "img/pipe.webp",
         },
         {
             name: "Juan Diego Quintana",
-            position: "El otro",
+            position: "Sistemas",
             description: "Vomite 🤮🤮",
-            image: "img/juan-Diego.jpeg",
+            image: "img/juan-Diego.webp",
         },
         {
             name: "Sergio",
             position: "El novio de lily",
             description: "Todas quieren con el",
-            image: "img/teacher2.png",
+            image: "img/sergio.webp",
         },
         {
             name: "Julieth",
-            position: "La perris",
+            position: "administradora contable",
             description: "La perris",
-            image: "img/julieth.jpeg",
+            image: "img/julieth.webp",
         },
         {
             name: "Lily Vega",
-            position: "La novia de Sergei",
+            position: "administradora contable",
             description: "La futura esposa de Sergei",
             image: "img/teacher2.png",
         },
         ,
         {
             name: "Juan Jose Sarabia",
-            position: "La novia de Sergei",
+            position: "administrador contable",
             description: "La futura esposa de Sergei",
-            image: "img/juanjo.jpg",
+            image: "img/juanjo.webp",
         },
     ],
     // ! Eventos
     events: [
         {
-            title: "La feria más bonita",
-            description: "la feria",
-            date: "10 SEP",
+            title: "Se robaron la navidad",
+            description: "Clausura Dampro",
+            date: "14 Diciembre",
             localitation: "Bucaramanga",
             image:
-                "https://blog.uber-cdn.com/cdn-cgi/image/width=2160,quality=80,onerror=redirect,format=auto/wp-content/uploads/2019/06/7-planes-en-Bucaramanga-para-aprovechar-tu-fin-de-semana-1024x512.png",
-        },
-        {
-            title: "Arte y circulacion",
-            description: "Evento del cafe",
-            date: "10 NOV",
-            localitation: "Bucaramanga",
-            image:
-                "https://blog.uber-cdn.com/cdn-cgi/image/width=2160,quality=80,onerror=redirect,format=auto/wp-content/uploads/2019/06/7-planes-en-Bucaramanga-para-aprovechar-tu-fin-de-semana-1024x512.png",
-        },
-        {
-            title: "Arte y circulacion",
-            description: "Evento del cafe",
-            date: "10 NOV",
-            localitation: "Bucaramanga",
-            image:
-                "https://blog.uber-cdn.com/cdn-cgi/image/width=2160,quality=80,onerror=redirect,format=auto/wp-content/uploads/2019/06/7-planes-en-Bucaramanga-para-aprovechar-tu-fin-de-semana-1024x512.png",
-        },
-        {
-            title: "Arte y circulacion",
-            description: "Evento del cafe",
-            date: "10 NOV",
-            localitation: "Bucaramanga",
-            image:
-                "https://blog.uber-cdn.com/cdn-cgi/image/width=2160,quality=80,onerror=redirect,format=auto/wp-content/uploads/2019/06/7-planes-en-Bucaramanga-para-aprovechar-tu-fin-de-semana-1024x512.png",
-        },
+                "img/se-robaron-la-navidad.webp",
+        }
     ],
     // ! Logros
     achievements: [
@@ -238,7 +214,7 @@ const data = {
             type: "companiesWorks"
         },
         {
-            image: "img/fiesta_campesina.jpeg",
+            image: "img/fiesta_campesina.webp",
             title: "Fiesta Campesina",
             subtitle: "¡Que viva Santander mano",
             type: "companiesWorks"
@@ -247,18 +223,6 @@ const data = {
             image: "img/casorio.jpeg",
             title: "El casorio",
             subtitle: "La historia de un amor campesino",
-            type: "companiesWorks"
-        },
-        {
-            image: "img/obra.jpg",
-            title: "Travesía",
-            subtitle: "Un viaje por colombia",
-            type: "companiesWorks"
-        },
-        {
-            image: "img/obra.jpg",
-            title: "La piedra de la felicidad",
-            subtitle: "Los laprosos de contratación",
             type: "companiesWorks"
         },
         {
@@ -283,18 +247,18 @@ const data = {
     ],
     //!Experiencias
     experiences: [
-        {
-            image: "img/obra.jpg",
-            title: "Argentina",
-            localitation: "Buenos aires",
-            age: "2020"
-        },
-        {
-            image: "img/obra.jpg",
-            title: "Ecuador",
-            localitation: "Quito",
-            age: "2020"
-        },
+        //{
+        //    image: "img/obra.jpg",
+        //    title: "Argentina",
+        //    localitation: "Buenos aires",
+        //    age: "2020"
+        //},
+        //{
+        //    image: "img/obra.jpg",
+        //    title: "Ecuador",
+        //    localitation: "Quito",
+        //    age: "2020"
+        //},
         {
             image: "img/obra.jpg",
             title: "Perú",
@@ -314,10 +278,10 @@ const data = {
             age: "2020"
         },
         {
-            image: "img/obra.jpg",
+            image: "img/danzando-peru.jpeg",
             title: "Danzando por el Perú",
             localitation: "Lima Perú",
-            age: "2020"
+            age: "2025"
         }
     ]
 
@@ -364,7 +328,6 @@ document.addEventListener("DOMContentLoaded", () => {
     populateTeachers()
     populateAdmin()
     populateEvents()
-    populateAchievements()
     populateWorks()
     populateExperiences()
 })
@@ -390,7 +353,7 @@ function populateUs() {
         const slide = document.createElement("div");
         slide.classList.add("us-slide");
 
-        slide.innerHTML = `<img src="${img}" alt="Imagen nosotros">`;
+        slide.innerHTML = `<img src="${img}" alt="Imagen nosotros" loading="lazy">`;
 
         slideContainer.appendChild(slide);
     });
@@ -421,7 +384,7 @@ function populateGroups() {
                 `
         <div class="group-card" data-index="${index}" style="animation-delay: ${index * 0.1}s">
             <div class="group-image">
-                <img src="${group.image}">
+                <img src="${group.image}" loading="lazy">
                 </div>
                 <h3>${group.name}</h3>
                 <p>${group.description}</p>
@@ -442,7 +405,7 @@ function populateGroups() {
                 `
          <div class="group-card" style="animation-delay: ${index * 0.1}s">
             <div class="group-image">
-                <img src="${group.image}">
+                <img src="${group.image}" loading="lazy">
                 </div>
                 <h3>${group.name}</h3>
                 <p>${group.description}</p>
@@ -496,7 +459,7 @@ function openModal(index, type) {
     modal.innerHTML = `
     <div class="modal-content">
         <span class="close-btn" id="closeModal">&times;</span>
-        <img src="${group.image}" alt="${group.name}" class="modal-image">
+        <img src="${group.image}" alt="${group.name}" class="modal-image" loading="lazy">
         <div class="info">
             <h2>${group.name}</h2>
             <p>${group.description_large}</p>
@@ -554,7 +517,7 @@ function populateWorks() {
             (work, index) => `
         <div class="event-card" style="animation-delay: ${index * 0.1}s">
             <div class="event-image-container">
-                <img src="${work.image}" alt="${event.title}" class="work-img">
+                <img src="${work.image}" alt="${event.title}" class="work-img" loading="lazy">
             </div>
             <div class="event-content">
                 <div class="event-info">
@@ -573,7 +536,7 @@ function populateWorks() {
             (work, index) => `
         <div class="event-card" style="animation-delay: ${index * 0.1}s">
             <div class="event-image-container">
-                <img src="${work.image}" alt="${event.title}">
+                <img src="${work.image}" alt="${event.title}" loading="lazy">
             </div>
             <div class="event-content">
                 <div class="event-info">
@@ -595,7 +558,7 @@ function populateTeachers() {
                 `
         <div class="teacher-card" style="animation-delay: ${index * 0.15}s">
             <div class="teacher-image-container">
-                <img src="${teacher.image}" alt="${teacher.name}" class="teacher-image">
+                <img src="${teacher.image}" alt="${teacher.name}" class="teacher-image" loading="lazy">
             </div>
             <div class="teacher-info">
                 <h3>${teacher.name}</h3>
@@ -625,12 +588,12 @@ function populateAdmin() {
             (member, index) => `
         <div class="admin-card" style="animation-delay: ${index * 0.15}s">
             <div class="admin-image-container">
-                <img src="${member.image}" alt="${member.name}" class="admin-image">
+                <img src="${member.image}" alt="${member.name}" class="admin-image" loading="lazy">
             </div>
             <div class="admin-info">
                 <h3>${member.name}</h3>
                 <p class="position"><span>${member.position}</span></p>
-                <p class="description">${member.description}</p>
+                <!--<p class="description">${member.description}</p>-->
             </div>
             
         </div>
@@ -656,7 +619,7 @@ function populateEvents() {
             (event, index) => `
         <div class="event-card" style="animation-delay: ${index * 0.1}s">
             <div class="event-image-container">
-                <img src="${event.image}" alt="${event.title}">
+                <img src="${event.image}" alt="${event.title}" loading="lazy">
             </div>
             <div class="event-content">
                 <div class="event-info">
@@ -681,23 +644,7 @@ function populateEvents() {
     console.log("Contenido insertado en el contenedor");
 }
 
-function populateAchievements() {
-    const container = document.getElementById("achievements-container")
-    container.innerHTML = data.achievements.map(
-        (achievement, index) => `
-        <div class="achievements-card" style="animation-delay: ${index * 0.1}s">
-            <div class="achievement-content">
-                <div class="achievement-icon">${achievement.icon}</div>
-                <div class="achevement-info">
-                <h3>${achievement.number}</h3>
-                <p class="achievement-title"><span>${achievement.title}</span></p>
-                <p class="achievement-desc">${achievement.description}</p>
-                </div>
-            </div>
-        </div>
-        `,
-    )
-}
+
 
 function populateExperiences() {
     const container = document.getElementById("experiencias-container")
@@ -707,7 +654,7 @@ function populateExperiences() {
                 `
          <div class="group-card" style="animation-delay: ${index * 0.1}s">
             <div class="group-image">
-                <img src="${experience.image}">
+                <img src="${experience.image}" loading="lazy">
                 </div>
                 <h3>${experience.title}</h3>
                 <div class="group-details">
