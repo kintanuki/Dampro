@@ -13,19 +13,19 @@ const data = {
     groups: [
         {
             name: "Pre-Infantil",
-            description: "Descripción del grupo",
+            description: "Danza estilos clásico, urbano, latino y folclore",
             description_large:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+                "",
             type: "grupo",
             ages: "2-3 años",
             schedule: "Sab 10:00 AM -1:00 PM",
-            image: "img/group2.png",
+            image: "img/pre-infantil.webp",
         },
         {
             name: "Infantil",
-            description: "Descripción del grupo",
+            description: "Danza estilos clásico, urbano, latino y folclore",
             description_large:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+                "",
             type: "grupo",
             ages: "2-3 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
@@ -33,54 +33,58 @@ const data = {
         },
         {
             name: "Junior",
-            description: "Descripcion del grupo",
+            description: "Danza estilos clásico, urbano, latino y folclore",
             description_large:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+                "En este grupo manejamos Infantil A y B, dirigido a niños de 3 a 6 años, donde se inicia y fortalece el proceso formativo en danza de manera lúdica y progresiva. A través de los estilos clásico, urbano, latino y folclórico, los niños desarrollan coordinación, ritmo, expresión corporal y disciplina, fomentando el amor por la danza desde temprana edad. Infantil A tiene horario los miércoles y viernes de 4:00 a 6:00 p.m., mientras que Infantil B se desarrolla los sábados de 9:30 a.m. a 1:00 p.m.",
             type: "grupo",
             ages: "6-10 años",
-            schedule: "Sab 10:00 AM - 1:00 PM",
+            schedule: "Infantil A, B y C",
             image: "img/junior.webp",
         },
         {
             name: "Pre-Juvenil",
-            description: "Descripcion del grupo",
+            description: "Danza estilos clásico, urbano, latino y folclore",
             description_large:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+                "",
             type: "grupo",
-            ages: "2-3 años",
+            ages: "10-11 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
-            image: "img/group2.png",
+            image: "img/pre-juvenil.webp",
         },
         {
             name: "Juvenil",
-            description: "Descripcion del grupo",
+            description: "Danza estilos clásico, urbano, latino y folclore",
             description_large:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+                "En este grupo manejamos Infantil A y B, dirigido a niños de 3 a 6 años, tanto para quienes desean iniciar en la danza como para aquellos que continúan su proceso formativo. El aprendizaje se desarrolla de manera lúdica y progresiva a través de los estilos clásico, urbano, latino y folclórico, fortaleciendo la coordinación, el ritmo, la expresión corporal y la disciplina, y fomentando el amor por la danza desde temprana edad. Infantil A tiene horario los miércoles y viernes de 4:00 p.m. a 6:00 p.m., mientras que Infantil B se desarrolla los sábados de 9:30 a.m. a 1:00 p.m.",
             type: "grupo",
-            ages: "2-3 años",
+            ages: "12-17 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
-            image: "img/group2.png",
+            image: "img/juvenil.webp",
         },
         {
             name: "Compañia Yurumany",
-            description: "Descripcion del grupo",
+            description: "Danza estilos clásico, urbano, latino y folclore",
             description_large:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+                "",
             type: "compañia",
-            ages: "2-3 años",
+            ages: "18-27 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
-            image: "img/group2.png",
+            image: "img/yurumany.webp",
         },
         {
             name: "Compañia Kawsay",
-            description: "Descripcion del grupo",
+            description: "Danza estilos clásico, urbano, latino y folclore",
             description_large:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend nec tortor ac efficitur. Sed eu blandit lacus, quis tristique nibh. Cras mattis mauris ligula, non tincidunt odio pellentesque eu. Phasellus sed justo pellentesque, vestibulum augue vitae, luctus massa. Aliquam ligula ante, rhoncus sed commodo vel, placerat ut ipsum. Suspendisse dapibus eleifend magna, sit amet fringilla quam posuere in. Nullam pharetra magna quis risus tempus mattis. Pellentesque placerat, mi gravida aliquet lacinia, metus massa ullamcorper enim, vitae blandit sem lorem sed arcu.",
+                "",
             type: "compañia",
-            ages: "2-3 años",
+            ages: "Mayores de 70 años",
             schedule: "Sab 10:00 AM - 1:00 PM",
             image: "img/kawsay.webp",
         },
+        {
+            name: "Baile Social",
+
+        }
     ],
     // ! Profesores
     teachers: [
@@ -96,7 +100,7 @@ const data = {
             //specialty: "Especialidad? x2",
             experience: "Profesora",
             image: "img/anny.webp",
-            achievements: ["La mami de sergei", "Profesora junior?"],
+            achievements: ["Infanti", "Junior"],
         },
         {
             name: "Danna Sofia Bautista",
@@ -110,7 +114,7 @@ const data = {
             //specialty: "The peach? JASJAJSJ",
             experience: "Profesora",
             image: "img/gy.webp",
-            achievements: ["Profesora Juvenil?"],
+            achievements: ["Junior C","Juvenil C"],
         },
         {
             name: "Angie Serrano",
@@ -143,7 +147,7 @@ const data = {
         },
         {
             name: "Sergio",
-            position: "El novio de lily",
+            position: "Asistente administrativo",
             description: "Todas quieren con el",
             image: "img/sergio.webp",
         },
@@ -155,16 +159,9 @@ const data = {
         },
         {
             name: "Lily Vega",
-            position: "administradora contable",
+            position: "administradora archivistica",
             description: "La futura esposa de Sergei",
             image: "img/lily.webp",
-        },
-        ,
-        {
-            name: "Juan Jose Sarabia",
-            position: "administrador contable",
-            description: "La futura esposa de Sergei",
-            image: "img/juanjo.webp",
         },
     ],
     // ! Eventos
@@ -226,22 +223,22 @@ const data = {
             type: "companiesWorks"
         },
         {
-            image: "img/obra.jpg",
+            image: "img/enredados.webp",
             title: "Enredados",
             subtitle: "Adaptación de la película animada de disney",
             type: "groupsWorks"
         },
         {
-            image: "img/obra.jpg",
+            image: "img/origen-de-los-guardianes.webp",
             title: "El origen de los guardianes",
-            subtile: "Adaptación de la película animada de DreamWorks",
+            subtitle: "Adaptación de la película animada de DreamWorks",
             type: "groupsWorks"
         }
         ,
         {
             image: "img/emiliano.webp",
             title: "Emiliano y su bambazu",
-            subtile: "la historia de Emiliano",
+            subtitle: "la historia de Emiliano",
             type: "groupsWorks"
         }
     ],
@@ -260,25 +257,25 @@ const data = {
         //    age: "2020"
         //},
         {
-            image: "img/obra.jpg",
+            image: "img/peru.webp",
             title: "Perú",
             localitation: "Lima",
-            age: "2020"
+            age: "2022"
         },
         {
-            image: "img/obra.jpg",
+            image: "img/mexico.webp",
             title: "México",
             localitation: "Morelia",
-            age: "2020"
+            age: "2023"
         },
         {
-            image: "img/chile.jpg",
+            image: "img/chile.webp",
             title: "Gira Chile",
             localitation: "Santiago de Chile",
-            age: "2020"
+            age: "2025"
         },
         {
-            image: "img/danzando-peru.jpeg",
+            image: "img/danzando-peru.webp",
             title: "Danzando por el Perú",
             localitation: "Lima Perú",
             age: "2025"
@@ -390,7 +387,7 @@ function populateGroups() {
                 <p>${group.description}</p>
                 <div class="group-details">
                     <p class="ages">Edades: ${group.ages}</p>
-                    <p class="schedule">${group.schedule}</p>
+                    <p class="schedule">Haz clic y conoce más sobre el grupo</p>
                 </div>
             </div>
         </div>
@@ -411,7 +408,7 @@ function populateGroups() {
                 <p>${group.description}</p>
                 <div class="group-details">
                     <p class="ages">Edades: ${group.ages}</p>
-                    <p class="schedule">${group.schedule}</p>
+                    <p class="schedule">Haz clic y conoce más sobre el grupo</p>
                 </div>
             </div>
         </div>
@@ -464,7 +461,7 @@ function openModal(index, type) {
             <h2>${group.name}</h2>
             <p>${group.description_large}</p>
             <p><strong>Edades:</strong> ${group.ages}</p>
-            <p><strong>Horario:</strong> ${group.schedule}</p>
+            
         </div>
         <a href="https://wa.me/573187059300?text=%C2%A1Hola!%20Me%20interesa%20unirme%20a%20${encodeURIComponent(group.name)}.%20%C2%BFMe%20das%20m%C3%A1s%20informaci%C3%B3n%3F" 
         target="_blank">
